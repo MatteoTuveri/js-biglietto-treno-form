@@ -6,69 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/style.css">
     <title>calcolo del prezzo del biglietto del treno</title>
 </head>
 
-<body>
+<body class="bg-secondary">
 
     <div class="container">
-        <div>
-            <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
-            <div id="data" class="d-flex">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control" id="name">
-                </div>
-                <div class="mb-3">
-                    <label for="km" class="form-label">kilometri da percorrere</label>
-                    <input type="text" class="form-control" id="km">
-                </div>
-                <div class="mb-3">
-                    <label for="age" class="form-label">Fascia età</label>
-                    <select id="age" class="form-select" aria-label="Default select">
-                        <option value="null">Scegli un opzione</option>
-                        <option value="young">1-18</option>
-                        <option value="adult">18-65</option>
-                        <option value="old">65+</option>
-                    </select>
-                </div>
-            </div>
-            <div class="d-flex">
-                <button id="submit" type="button" class="btn btn-primary">Genera</button>
-                <button id="delete" type="button" class="btn btn-primary">Annulla</button>
-            </div>
-        </div>
-        <div id="ticket-box" class="d-none">
-            <h2 id="ticket-allert"></h2>
-            <div id="ticket" class="d-none">
-                <h4 class="text-uppercase">dettaglio passeggeri</h4>
-                <div class="d-flex">
-                    <div>
-                        <div class="text-uppercase">Nome passeggero</div>
-                        <div id="passenger">
-
+        <div class="bg-danger text-white row">
+            <div class="col-12 py-4 text-center">
+                <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
+                <div class="p-3 bg-white rounded-2 text-black d-flex flex-column align-items-center">
+                    <div id="data" class="d-flex">
+                        <div class="mb-3 mx-2">
+                            <label for="name" class="form-label">Nome e Cognome</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3 mx-2">
+                            <label for="km" class="form-label">kilometri da percorrere</label>
+                            <input type="text" class="form-control" id="km">
+                        </div>
+                        <div class="mb-3 mx-2">
+                            <label for="age" class="form-label">Fascia età</label>
+                            <select id="age" class="form-select" aria-label="Default select">
+                                <option value="null">Scegli un opzione</option>
+                                <option value="young">1-18</option>
+                                <option value="adult">18-65</option>
+                                <option value="old">65+</option>
+                            </select>
                         </div>
                     </div>
-                    <div>
-                        <table>
-                            <thead>
-                                <th>Offerta</th>
-                                <th>Carrozza</th>
-                                <th>Codice CP</th>
-                                <th>Costo Biglietto</th>
-                            </thead>
-                            <tbody>
-                                <td id="offer"></td>
-                                <td id="seat"></td>
-                                <td id="code"></td>
-                                <td id="price"></td>
-                            </tbody>
-                        </table>
+                    <div class="d-flex mx-1">
+                        <button id="submit" type="button" class="btn btn-primary mx-1">Genera</button>
+                        <button id="delete" type="button" class="btn btn-primary mx-1">Annulla</button>
+                    </div>
+                </div>
+            </div>
+            <div id="ticket-box" class="col-12 py-4 text-start d-none">
+                <h2 id="ticket-allert" class="text-uppercase"></h2>
+                <div id="ticket" class="p-3 bg-white rounded-2 text-black d-flex flex-column d-none">
+                    <h4 class="text-uppercase">dettaglio passeggeri</h4>
+                    <div class="d-flex">
+                        <div class="  col-4 bg-dark-subtle px-2 py-2">
+                            <div class="text-uppercase fw-bold">Nome passeggero</div>
+                            <div id="passenger">
+
+                            </div>
+                        </div>
+                        <div class="col-8 border-bottom border-top px-2 py-2">
+                            <table class="w-100">
+                                <thead>
+                                    <th>Offerta</th>
+                                    <th>Carrozza</th>
+                                    <th>Codice CP</th>
+                                    <th>Costo Biglietto</th>
+                                </thead>
+                                <tbody>
+                                    <td id="offer"></td>
+                                    <td id="seat"></td>
+                                    <td id="code"></td>
+                                    <td id="price"></td>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <script src="JS/script.js"></script>
 </body>
 
