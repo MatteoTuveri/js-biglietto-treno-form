@@ -8,7 +8,7 @@ submit.addEventListener('click',
         let name = document.getElementById("name").value;
         let km = parseInt(document.getElementById("km").value);
         let age = document.getElementById("age").value;
-        
+
         document.getElementById("ticket-box").classList.remove("d-none");
 
         let random10 = Math.floor((Math.random() * 10) + 1);
@@ -59,4 +59,5 @@ document.getElementById("delete").addEventListener('click',
         document.getElementById("name").value = '';
         document.getElementById("km").value = '';
         document.getElementById("age").value = 'null';
+        document.getElementById("ticket-box").classList.add("d-none");
     })
