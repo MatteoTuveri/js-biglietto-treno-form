@@ -8,7 +8,13 @@ submit.addEventListener('click',
         let name = document.getElementById("name").value;
         let km = parseInt(document.getElementById("km").value);
         let age = document.getElementById("age").value;
+        
         document.getElementById("ticket-box").classList.remove("d-none");
+
+        let random10 = Math.floor((Math.random() * 10) + 1);
+        document.getElementById("seat").innerHTML = random10;
+        let random10000 = Math.floor((Math.random() * 9998) + 1);
+        document.getElementById("code").innerHTML = random10000;
 
         if (name === '' || isNaN(parseInt(name)) === false) {
             document.getElementById("ticket-allert").innerHTML = `Inserire nome corretto`;
