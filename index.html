@@ -16,21 +16,26 @@
             <h2 class="text-uppercase">Calcola il prezzo del tuo biglietto</h2>
             <div id="data" class="d-flex">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" value=" ">
+                    <label for="name" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="name">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" value=" ">
+                    <label for="km" class="form-label">kilometri da percorrere</label>
+                    <input type="text" class="form-control" id="km">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" value=" ">
+                    <label for="age" class="form-label">Fascia età</label>
+                    <select id="age" class="form-select" aria-label="Default select">
+                        <option value="null">Scegli un opzione</option>
+                        <option value="young">1-18</option>
+                        <option value="adult">18-65</option>
+                        <option value="old">65+</option>
+                    </select>
                 </div>
             </div>
             <div class="d-flex">
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-primary">Primary</button>
+                <button id="submit" type="button" class="btn btn-primary">Genera</button>
+                <button id="delete" type="button" class="btn btn-primary">Annulla</button>
             </div>
         </div>
         <div>
