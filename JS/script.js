@@ -13,19 +13,28 @@ function(){
         console.log('inserire numero kilometri corretto');
     }
     else if(age === 'young'){
-        let price = (basePrice *km)*(1-youngDiscount);
-        console.log(price);
-        console.log(age);
+        let price = document.querySelector("#price");
+        price.innerHTML = (parseFloat((basePrice *km)*(1-youngDiscount)).toFixed(2)) + '€';
+        const offer = document.querySelector("#offer");
+        offer.innerHTML = `Young plan`;
+
+
     }
     else if(age === 'old'){
-        let price = (basePrice *km)*(1-oldDiscount);
-        console.log(price);
-        console.log(age);
+        let price =document.querySelector("#price");
+        price.innerHTML = (parseFloat((basePrice *km)*(1-oldDiscount)).toFixed(2)) + '€';
+        const offer = document.querySelector("#offer");
+        offer.innerHTML = `Over 65 plan`;
+
+
     }
     else if (age === 'adult') {
-        let price = basePrice *km;
-        console.log(price);
-        console.log(age);
+        let price =document.querySelector("#price");
+        price.innerHTML = (parseFloat(basePrice *km).toFixed(2)) + '€';
+        const offer = document.querySelector("#offer");
+        offer.innerHTML = `Basic plan`;
+
+
     }
     else if(age === 'null'){
         console.log('inserisci età');
