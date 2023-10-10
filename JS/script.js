@@ -10,19 +10,18 @@ submit.addEventListener('click',
         let age = document.getElementById("age").value;
         document.getElementById("ticket-box").classList.remove("d-none");
 
-
-        if (km <= 0 || isNaN(km)) {
+        if (name === '' || isNaN(parseInt(name)) === false) {
+            document.getElementById("ticket-allert").innerHTML = `Inserire nome corretto`;
+            document.getElementById("ticket-allert").classList.add("text-center");
+            document.getElementById("ticket").classList.add("d-none");
+        }
+        else if (km <= 0 || isNaN(km)) {
             document.getElementById("ticket-allert").innerHTML = `inserire numero kilometri corretto`;
             document.getElementById("ticket-allert").classList.add("text-center");
             document.getElementById("ticket").classList.add("d-none");
         }
         else if (age === 'null') {
             document.getElementById("ticket-allert").innerHTML = `Scegli la fascia d'età`;
-            document.getElementById("ticket-allert").classList.add("text-center");
-            document.getElementById("ticket").classList.add("d-none");
-        }
-        else if (name === '' || isNaN(parseInt(name)) === false) {
-            document.getElementById("ticket-allert").innerHTML = `Inserire nome corretto`;
             document.getElementById("ticket-allert").classList.add("text-center");
             document.getElementById("ticket").classList.add("d-none");
         }
@@ -47,5 +46,11 @@ submit.addEventListener('click',
                 document.getElementById("offer").innerHTML = `Basic plan`;
             }
         }
+    }
+);
+document.getElementById("delete").addEventListener('click',
+    function () {
+        document.getElementById("name").value = '';
+        document.getElementById("km").value = '';
+        document.getElementById("age").value = 'null';
     })
-
